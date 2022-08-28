@@ -5,20 +5,21 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Report from '../components/Report';
-import App from '../App';
-import Registration from '../components/Registration';
-import Upload from '../components/Upload';
-
+import Registration from '../pages/Registration';
+import Politica from '../pages/Politica'
+import StockReport from '../pages/StockReport';
+import StockUpload from '../pages/StockUpload';
 
 const RoutesApp = () => {
     return(
-        <BrowserRouter>
+      <BrowserRouter>
         <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<StockReport />} />
         <Route path="param" element={<Registration />} />
-        <Route path="upload" element={<Upload />} />
-        <Route path="report" element={<Report />} />
+        <Route path="upload" element={<StockUpload />} />
+        <Route path="report" element={<StockReport />} />
+        <Route path="politica" element={<Politica />} />
+        <Route path='*' element={<h1>Not Found</h1>}/>
       </Routes>
     </BrowserRouter>
     )
